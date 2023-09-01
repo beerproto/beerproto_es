@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -34,7 +34,7 @@ jobs:
         uses: actions-x/commit@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: "master"
+          branch: "main"
       - name: Create Release
         uses: actions/create-release@v1
         env:
