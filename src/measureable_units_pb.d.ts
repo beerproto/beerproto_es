@@ -125,9 +125,9 @@ export declare enum VolumeUnit {
   /**
    * ifloz
    *
-   * @generated from enum value: VOLUME_UNIT_IFOZ = 11;
+   * @generated from enum value: VOLUME_UNIT_IFLOZ = 11;
    */
-  IFOZ = 11,
+  IFLOZ = 11,
 
   /**
    * ipt

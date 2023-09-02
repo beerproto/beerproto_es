@@ -43,7 +43,7 @@ export const VolumeUnit = proto3.makeEnum(
     {no: 8, name: "VOLUME_UNIT_QT", localName: "QT"},
     {no: 9, name: "VOLUME_UNIT_GAL", localName: "GAL"},
     {no: 10, name: "VOLUME_UNIT_BBL", localName: "BBL"},
-    {no: 11, name: "VOLUME_UNIT_IFOZ", localName: "IFOZ"},
+    {no: 11, name: "VOLUME_UNIT_IFLOZ", localName: "IFLOZ"},
     {no: 12, name: "VOLUME_UNIT_IPT", localName: "IPT"},
     {no: 13, name: "VOLUME_UNIT_IQT", localName: "IQT"},
     {no: 14, name: "VOLUME_UNIT_IGAL", localName: "IGAL"},
