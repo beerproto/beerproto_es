@@ -12,6 +12,7 @@
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { Message, proto3 } from "@bufbuild/protobuf";
+import type { BinaryExpression } from "./expression_pb.js";
 
 /**
  * @generated from enum beerproto.v1.ArithmeticOperators
@@ -834,6 +835,59 @@ export declare class DiastaticPowerType extends Message<DiastaticPowerType> {
   static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): DiastaticPowerType;
 
   static equals(a: DiastaticPowerType | PlainMessage<DiastaticPowerType> | undefined, b: DiastaticPowerType | PlainMessage<DiastaticPowerType> | undefined): boolean;
+}
+
+/**
+ * @generated from message beerproto.v1.ConversionDiastaticPowerUnit
+ */
+export declare class ConversionDiastaticPowerUnit extends Message<ConversionDiastaticPowerUnit> {
+  /**
+   * @generated from field: repeated beerproto.v1.ConversionDiastaticPowerUnit.ConversionDiastaticPowerUnitRate rates = 1;
+   */
+  rates: ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate[];
+
+  constructor(data?: PartialMessage<ConversionDiastaticPowerUnit>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "beerproto.v1.ConversionDiastaticPowerUnit";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ConversionDiastaticPowerUnit;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ConversionDiastaticPowerUnit;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ConversionDiastaticPowerUnit;
+
+  static equals(a: ConversionDiastaticPowerUnit | PlainMessage<ConversionDiastaticPowerUnit> | undefined, b: ConversionDiastaticPowerUnit | PlainMessage<ConversionDiastaticPowerUnit> | undefined): boolean;
+}
+
+/**
+ * @generated from message beerproto.v1.ConversionDiastaticPowerUnit.ConversionDiastaticPowerUnitRate
+ */
+export declare class ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate extends Message<ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate> {
+  /**
+   * @generated from field: beerproto.v1.DiastaticPowerUnit target = 1;
+   */
+  target: DiastaticPowerUnit;
+
+  /**
+   * @generated from field: beerproto.v1.BinaryExpression expression = 2;
+   */
+  expression?: BinaryExpression;
+
+  constructor(data?: PartialMessage<ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "beerproto.v1.ConversionDiastaticPowerUnit.ConversionDiastaticPowerUnitRate";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate;
+
+  static equals(a: ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate | PlainMessage<ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate> | undefined, b: ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate | PlainMessage<ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate> | undefined): boolean;
 }
 
 /**

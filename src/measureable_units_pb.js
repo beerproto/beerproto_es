@@ -11,6 +11,7 @@
 // @ts-nocheck
 
 import { proto3 } from "@bufbuild/protobuf";
+import { BinaryExpression } from "./expression_pb.js";
 
 /**
  * @generated from enum beerproto.v1.ArithmeticOperators
@@ -327,6 +328,28 @@ export const DiastaticPowerType = proto3.makeMessageType(
     { no: 1, name: "value", kind: "scalar", T: 1 /* ScalarType.DOUBLE */ },
     { no: 2, name: "unit", kind: "enum", T: proto3.getEnumType(DiastaticPowerUnit) },
   ],
+);
+
+/**
+ * @generated from message beerproto.v1.ConversionDiastaticPowerUnit
+ */
+export const ConversionDiastaticPowerUnit = proto3.makeMessageType(
+  "beerproto.v1.ConversionDiastaticPowerUnit",
+  () => [
+    { no: 1, name: "rates", kind: "message", T: ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate, repeated: true },
+  ],
+);
+
+/**
+ * @generated from message beerproto.v1.ConversionDiastaticPowerUnit.ConversionDiastaticPowerUnitRate
+ */
+export const ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate = proto3.makeMessageType(
+  "beerproto.v1.ConversionDiastaticPowerUnit.ConversionDiastaticPowerUnitRate",
+  () => [
+    { no: 1, name: "target", kind: "enum", T: proto3.getEnumType(DiastaticPowerUnit) },
+    { no: 2, name: "expression", kind: "message", T: BinaryExpression },
+  ],
+  {localName: "ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate"},
 );
 
 /**
