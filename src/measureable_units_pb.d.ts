@@ -748,6 +748,64 @@ export declare class MassType extends Message<MassType> {
 }
 
 /**
+ * @generated from message beerproto.v1.ConversionMassUnit
+ */
+export declare class ConversionMassUnit extends Message<ConversionMassUnit> {
+  /**
+   * @generated from field: repeated beerproto.v1.ConversionMassUnit.ConversionMassUnitRate rates = 1;
+   */
+  rates: ConversionMassUnit_ConversionMassUnitRate[];
+
+  constructor(data?: PartialMessage<ConversionMassUnit>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "beerproto.v1.ConversionMassUnit";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ConversionMassUnit;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ConversionMassUnit;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ConversionMassUnit;
+
+  static equals(a: ConversionMassUnit | PlainMessage<ConversionMassUnit> | undefined, b: ConversionMassUnit | PlainMessage<ConversionMassUnit> | undefined): boolean;
+}
+
+/**
+ * @generated from message beerproto.v1.ConversionMassUnit.ConversionMassUnitRate
+ */
+export declare class ConversionMassUnit_ConversionMassUnitRate extends Message<ConversionMassUnit_ConversionMassUnitRate> {
+  /**
+   * @generated from field: beerproto.v1.MassUnit target = 1;
+   */
+  target: MassUnit;
+
+  /**
+   * @generated from field: beerproto.v1.ArithmeticOperators operator = 2;
+   */
+  operator: ArithmeticOperators;
+
+  /**
+   * @generated from field: double value = 3;
+   */
+  value: number;
+
+  constructor(data?: PartialMessage<ConversionMassUnit_ConversionMassUnitRate>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "beerproto.v1.ConversionMassUnit.ConversionMassUnitRate";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ConversionMassUnit_ConversionMassUnitRate;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ConversionMassUnit_ConversionMassUnitRate;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ConversionMassUnit_ConversionMassUnitRate;
+
+  static equals(a: ConversionMassUnit_ConversionMassUnitRate | PlainMessage<ConversionMassUnit_ConversionMassUnitRate> | undefined, b: ConversionMassUnit_ConversionMassUnitRate | PlainMessage<ConversionMassUnit_ConversionMassUnitRate> | undefined): boolean;
+}
+
+/**
  * Diastatic power is a measurement of malted grains enzymatic content. A value of 35 Lintner is needed to self convert, while a value of 100 or more is desirable for base malts
  *
  * @generated from message beerproto.v1.DiastaticPowerType

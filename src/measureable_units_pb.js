@@ -294,6 +294,29 @@ export const MassType = proto3.makeMessageType(
 );
 
 /**
+ * @generated from message beerproto.v1.ConversionMassUnit
+ */
+export const ConversionMassUnit = proto3.makeMessageType(
+  "beerproto.v1.ConversionMassUnit",
+  () => [
+    { no: 1, name: "rates", kind: "message", T: ConversionMassUnit_ConversionMassUnitRate, repeated: true },
+  ],
+);
+
+/**
+ * @generated from message beerproto.v1.ConversionMassUnit.ConversionMassUnitRate
+ */
+export const ConversionMassUnit_ConversionMassUnitRate = proto3.makeMessageType(
+  "beerproto.v1.ConversionMassUnit.ConversionMassUnitRate",
+  () => [
+    { no: 1, name: "target", kind: "enum", T: proto3.getEnumType(MassUnit) },
+    { no: 2, name: "operator", kind: "enum", T: proto3.getEnumType(ArithmeticOperators) },
+    { no: 3, name: "value", kind: "scalar", T: 1 /* ScalarType.DOUBLE */ },
+  ],
+  {localName: "ConversionMassUnit_ConversionMassUnitRate"},
+);
+
+/**
  * Diastatic power is a measurement of malted grains enzymatic content. A value of 35 Lintner is needed to self convert, while a value of 100 or more is desirable for base malts
  *
  * @generated from message beerproto.v1.DiastaticPowerType
