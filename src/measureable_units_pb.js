@@ -407,6 +407,28 @@ export const ColorType = proto3.makeMessageType(
 );
 
 /**
+ * @generated from message beerproto.v1.ConversionColorUnit
+ */
+export const ConversionColorUnit = proto3.makeMessageType(
+  "beerproto.v1.ConversionColorUnit",
+  () => [
+    { no: 1, name: "rates", kind: "message", T: ConversionColorUnit_ConversionColorUnitRate, repeated: true },
+  ],
+);
+
+/**
+ * @generated from message beerproto.v1.ConversionColorUnit.ConversionColorUnitRate
+ */
+export const ConversionColorUnit_ConversionColorUnitRate = proto3.makeMessageType(
+  "beerproto.v1.ConversionColorUnit.ConversionColorUnitRate",
+  () => [
+    { no: 1, name: "target", kind: "enum", T: proto3.getEnumType(ColorUnit) },
+    { no: 2, name: "tree", kind: "message", T: ExpressionTree },
+  ],
+  {localName: "ConversionColorUnit_ConversionColorUnitRate"},
+);
+
+/**
  * @generated from message beerproto.v1.CarbonationType
  */
 export const CarbonationType = proto3.makeMessageType(

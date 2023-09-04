@@ -1032,6 +1032,59 @@ export declare class ColorType extends Message<ColorType> {
 }
 
 /**
+ * @generated from message beerproto.v1.ConversionColorUnit
+ */
+export declare class ConversionColorUnit extends Message<ConversionColorUnit> {
+  /**
+   * @generated from field: repeated beerproto.v1.ConversionColorUnit.ConversionColorUnitRate rates = 1;
+   */
+  rates: ConversionColorUnit_ConversionColorUnitRate[];
+
+  constructor(data?: PartialMessage<ConversionColorUnit>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "beerproto.v1.ConversionColorUnit";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ConversionColorUnit;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ConversionColorUnit;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ConversionColorUnit;
+
+  static equals(a: ConversionColorUnit | PlainMessage<ConversionColorUnit> | undefined, b: ConversionColorUnit | PlainMessage<ConversionColorUnit> | undefined): boolean;
+}
+
+/**
+ * @generated from message beerproto.v1.ConversionColorUnit.ConversionColorUnitRate
+ */
+export declare class ConversionColorUnit_ConversionColorUnitRate extends Message<ConversionColorUnit_ConversionColorUnitRate> {
+  /**
+   * @generated from field: beerproto.v1.ColorUnit target = 1;
+   */
+  target: ColorUnit;
+
+  /**
+   * @generated from field: beerproto.v1.ExpressionTree tree = 2;
+   */
+  tree?: ExpressionTree;
+
+  constructor(data?: PartialMessage<ConversionColorUnit_ConversionColorUnitRate>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "beerproto.v1.ConversionColorUnit.ConversionColorUnitRate";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ConversionColorUnit_ConversionColorUnitRate;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ConversionColorUnit_ConversionColorUnitRate;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ConversionColorUnit_ConversionColorUnitRate;
+
+  static equals(a: ConversionColorUnit_ConversionColorUnitRate | PlainMessage<ConversionColorUnit_ConversionColorUnitRate> | undefined, b: ConversionColorUnit_ConversionColorUnitRate | PlainMessage<ConversionColorUnit_ConversionColorUnitRate> | undefined): boolean;
+}
+
+/**
  * @generated from message beerproto.v1.CarbonationType
  */
 export declare class CarbonationType extends Message<CarbonationType> {
