@@ -12,37 +12,7 @@
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { Message, proto3 } from "@bufbuild/protobuf";
-import type { ExpressionTree } from "./expression_pb.js";
-
-/**
- * @generated from enum beerproto.v1.ArithmeticOperators
- */
-export declare enum ArithmeticOperators {
-  /**
-   * @generated from enum value: ARITHMETIC_OPERATORS_UNSPECIFIED = 0;
-   */
-  UNSPECIFIED = 0,
-
-  /**
-   * @generated from enum value: ARITHMETIC_OPERATORS_ADDITION = 1;
-   */
-  ADDITION = 1,
-
-  /**
-   * @generated from enum value: ARITHMETIC_OPERATORS_SUBTRACTION = 2;
-   */
-  SUBTRACTION = 2,
-
-  /**
-   * @generated from enum value: ARITHMETIC_OPERATORS_MULTIPLICATION = 3;
-   */
-  MULTIPLICATION = 3,
-
-  /**
-   * @generated from enum value: ARITHMETIC_OPERATORS_DIVISION = 4;
-   */
-  DIVISION = 4,
-}
+import type { BinaryArithmetic, ExpressionTree } from "./expression_pb.js";
 
 /**
  * @generated from enum beerproto.v1.VolumeUnit
@@ -666,9 +636,9 @@ export declare class ConversionVolumeUnit_ConversionVolumeUnitRate extends Messa
   target: VolumeUnit;
 
   /**
-   * @generated from field: beerproto.v1.ArithmeticOperators operator = 2;
+   * @generated from field: beerproto.v1.BinaryArithmetic operator = 2;
    */
-  operator: ArithmeticOperators;
+  operator: BinaryArithmetic;
 
   /**
    * @generated from field: double value = 3;
@@ -782,9 +752,9 @@ export declare class ConversionMassUnit_ConversionMassUnitRate extends Message<C
   target: MassUnit;
 
   /**
-   * @generated from field: beerproto.v1.ArithmeticOperators operator = 2;
+   * @generated from field: beerproto.v1.BinaryArithmetic operator = 2;
    */
-  operator: ArithmeticOperators;
+  operator: BinaryArithmetic;
 
   /**
    * @generated from field: double value = 3;

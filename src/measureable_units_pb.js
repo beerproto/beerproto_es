@@ -11,21 +11,7 @@
 // @ts-nocheck
 
 import { proto3 } from "@bufbuild/protobuf";
-import { ExpressionTree } from "./expression_pb.js";
-
-/**
- * @generated from enum beerproto.v1.ArithmeticOperators
- */
-export const ArithmeticOperators = proto3.makeEnum(
-  "beerproto.v1.ArithmeticOperators",
-  [
-    {no: 0, name: "ARITHMETIC_OPERATORS_UNSPECIFIED", localName: "UNSPECIFIED"},
-    {no: 1, name: "ARITHMETIC_OPERATORS_ADDITION", localName: "ADDITION"},
-    {no: 2, name: "ARITHMETIC_OPERATORS_SUBTRACTION", localName: "SUBTRACTION"},
-    {no: 3, name: "ARITHMETIC_OPERATORS_MULTIPLICATION", localName: "MULTIPLICATION"},
-    {no: 4, name: "ARITHMETIC_OPERATORS_DIVISION", localName: "DIVISION"},
-  ],
-);
+import { BinaryArithmetic, ExpressionTree } from "./expression_pb.js";
 
 /**
  * @generated from enum beerproto.v1.VolumeUnit
@@ -266,7 +252,7 @@ export const ConversionVolumeUnit_ConversionVolumeUnitRate = proto3.makeMessageT
   "beerproto.v1.ConversionVolumeUnit.ConversionVolumeUnitRate",
   () => [
     { no: 1, name: "target", kind: "enum", T: proto3.getEnumType(VolumeUnit) },
-    { no: 2, name: "operator", kind: "enum", T: proto3.getEnumType(ArithmeticOperators) },
+    { no: 2, name: "operator", kind: "enum", T: proto3.getEnumType(BinaryArithmetic) },
     { no: 3, name: "value", kind: "scalar", T: 1 /* ScalarType.DOUBLE */ },
   ],
   {localName: "ConversionVolumeUnit_ConversionVolumeUnitRate"},
@@ -311,7 +297,7 @@ export const ConversionMassUnit_ConversionMassUnitRate = proto3.makeMessageType(
   "beerproto.v1.ConversionMassUnit.ConversionMassUnitRate",
   () => [
     { no: 1, name: "target", kind: "enum", T: proto3.getEnumType(MassUnit) },
-    { no: 2, name: "operator", kind: "enum", T: proto3.getEnumType(ArithmeticOperators) },
+    { no: 2, name: "operator", kind: "enum", T: proto3.getEnumType(BinaryArithmetic) },
     { no: 3, name: "value", kind: "scalar", T: 1 /* ScalarType.DOUBLE */ },
   ],
   {localName: "ConversionMassUnit_ConversionMassUnitRate"},
