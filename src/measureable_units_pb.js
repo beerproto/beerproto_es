@@ -350,6 +350,28 @@ export const TemperatureType = proto3.makeMessageType(
 );
 
 /**
+ * @generated from message beerproto.v1.ConversionTemperatureUnit
+ */
+export const ConversionTemperatureUnit = proto3.makeMessageType(
+  "beerproto.v1.ConversionTemperatureUnit",
+  () => [
+    { no: 1, name: "rates", kind: "message", T: ConversionTemperatureUnit_ConversionTemperatureUnitRate, repeated: true },
+  ],
+);
+
+/**
+ * @generated from message beerproto.v1.ConversionTemperatureUnit.ConversionTemperatureUnitRate
+ */
+export const ConversionTemperatureUnit_ConversionTemperatureUnitRate = proto3.makeMessageType(
+  "beerproto.v1.ConversionTemperatureUnit.ConversionTemperatureUnitRate",
+  () => [
+    { no: 1, name: "target", kind: "enum", T: proto3.getEnumType(TemperatureUnit) },
+    { no: 2, name: "tree", kind: "message", T: ExpressionTree },
+  ],
+  {localName: "ConversionTemperatureUnit_ConversionTemperatureUnitRate"},
+);
+
+/**
  * @generated from message beerproto.v1.AcidityType
  */
 export const AcidityType = proto3.makeMessageType(

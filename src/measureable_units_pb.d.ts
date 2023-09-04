@@ -890,6 +890,59 @@ export declare class TemperatureType extends Message<TemperatureType> {
 }
 
 /**
+ * @generated from message beerproto.v1.ConversionTemperatureUnit
+ */
+export declare class ConversionTemperatureUnit extends Message<ConversionTemperatureUnit> {
+  /**
+   * @generated from field: repeated beerproto.v1.ConversionTemperatureUnit.ConversionTemperatureUnitRate rates = 1;
+   */
+  rates: ConversionTemperatureUnit_ConversionTemperatureUnitRate[];
+
+  constructor(data?: PartialMessage<ConversionTemperatureUnit>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "beerproto.v1.ConversionTemperatureUnit";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ConversionTemperatureUnit;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ConversionTemperatureUnit;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ConversionTemperatureUnit;
+
+  static equals(a: ConversionTemperatureUnit | PlainMessage<ConversionTemperatureUnit> | undefined, b: ConversionTemperatureUnit | PlainMessage<ConversionTemperatureUnit> | undefined): boolean;
+}
+
+/**
+ * @generated from message beerproto.v1.ConversionTemperatureUnit.ConversionTemperatureUnitRate
+ */
+export declare class ConversionTemperatureUnit_ConversionTemperatureUnitRate extends Message<ConversionTemperatureUnit_ConversionTemperatureUnitRate> {
+  /**
+   * @generated from field: beerproto.v1.TemperatureUnit target = 1;
+   */
+  target: TemperatureUnit;
+
+  /**
+   * @generated from field: beerproto.v1.ExpressionTree tree = 2;
+   */
+  tree?: ExpressionTree;
+
+  constructor(data?: PartialMessage<ConversionTemperatureUnit_ConversionTemperatureUnitRate>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "beerproto.v1.ConversionTemperatureUnit.ConversionTemperatureUnitRate";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ConversionTemperatureUnit_ConversionTemperatureUnitRate;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ConversionTemperatureUnit_ConversionTemperatureUnitRate;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ConversionTemperatureUnit_ConversionTemperatureUnitRate;
+
+  static equals(a: ConversionTemperatureUnit_ConversionTemperatureUnitRate | PlainMessage<ConversionTemperatureUnit_ConversionTemperatureUnitRate> | undefined, b: ConversionTemperatureUnit_ConversionTemperatureUnitRate | PlainMessage<ConversionTemperatureUnit_ConversionTemperatureUnitRate> | undefined): boolean;
+}
+
+/**
  * @generated from message beerproto.v1.AcidityType
  */
 export declare class AcidityType extends Message<AcidityType> {
