@@ -141,6 +141,16 @@ export declare class BinaryExpression extends Message<BinaryExpression> {
  * @generated from message beerproto.v1.ParameterExpression
  */
 export declare class ParameterExpression extends Message<ParameterExpression> {
+  /**
+   * @generated from field: string parameter = 1;
+   */
+  parameter: string;
+
+  /**
+   * @generated from field: optional double double = 2;
+   */
+  double?: number;
+
   constructor(data?: PartialMessage<ParameterExpression>);
 
   static readonly runtime: typeof proto3;

@@ -57,6 +57,9 @@ export const BinaryExpression = proto3.makeMessageType(
  */
 export const ParameterExpression = proto3.makeMessageType(
   "beerproto.v1.ParameterExpression",
-  [],
+  () => [
+    { no: 1, name: "parameter", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "double", kind: "scalar", T: 1 /* ScalarType.DOUBLE */, opt: true },
+  ],
 );
 
