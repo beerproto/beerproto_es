@@ -11,7 +11,7 @@
 // @ts-nocheck
 
 import { proto3 } from "@bufbuild/protobuf";
-import { BinaryExpression } from "./expression_pb.js";
+import { ExpressionTree } from "./expression_pb.js";
 
 /**
  * @generated from enum beerproto.v1.ArithmeticOperators
@@ -347,7 +347,7 @@ export const ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate = pro
   "beerproto.v1.ConversionDiastaticPowerUnit.ConversionDiastaticPowerUnitRate",
   () => [
     { no: 1, name: "target", kind: "enum", T: proto3.getEnumType(DiastaticPowerUnit) },
-    { no: 2, name: "expression", kind: "message", T: BinaryExpression },
+    { no: 2, name: "tree", kind: "message", T: ExpressionTree },
   ],
   {localName: "ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate"},
 );

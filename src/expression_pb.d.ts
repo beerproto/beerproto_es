@@ -44,6 +44,30 @@ export declare enum BinaryArithmetic {
 }
 
 /**
+ * @generated from message beerproto.v1.ExpressionTree
+ */
+export declare class ExpressionTree extends Message<ExpressionTree> {
+  /**
+   * @generated from field: beerproto.v1.BinaryExpression expression = 1;
+   */
+  expression?: BinaryExpression;
+
+  constructor(data?: PartialMessage<ExpressionTree>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "beerproto.v1.ExpressionTree";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ExpressionTree;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ExpressionTree;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ExpressionTree;
+
+  static equals(a: ExpressionTree | PlainMessage<ExpressionTree> | undefined, b: ExpressionTree | PlainMessage<ExpressionTree> | undefined): boolean;
+}
+
+/**
  * @generated from message beerproto.v1.UnaryExpression
  */
 export declare class UnaryExpression extends Message<UnaryExpression> {
@@ -145,11 +169,6 @@ export declare class ParameterExpression extends Message<ParameterExpression> {
    * @generated from field: string parameter = 1;
    */
   parameter: string;
-
-  /**
-   * @generated from field: optional double double = 2;
-   */
-  double?: number;
 
   constructor(data?: PartialMessage<ParameterExpression>);
 

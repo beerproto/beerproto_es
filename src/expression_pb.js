@@ -27,6 +27,16 @@ export const BinaryArithmetic = proto3.makeEnum(
 );
 
 /**
+ * @generated from message beerproto.v1.ExpressionTree
+ */
+export const ExpressionTree = proto3.makeMessageType(
+  "beerproto.v1.ExpressionTree",
+  () => [
+    { no: 1, name: "expression", kind: "message", T: BinaryExpression },
+  ],
+);
+
+/**
  * @generated from message beerproto.v1.UnaryExpression
  */
 export const UnaryExpression = proto3.makeMessageType(
@@ -59,7 +69,6 @@ export const ParameterExpression = proto3.makeMessageType(
   "beerproto.v1.ParameterExpression",
   () => [
     { no: 1, name: "parameter", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "double", kind: "scalar", T: 1 /* ScalarType.DOUBLE */, opt: true },
   ],
 );
 

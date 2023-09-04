@@ -12,7 +12,7 @@
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { Message, proto3 } from "@bufbuild/protobuf";
-import type { BinaryExpression } from "./expression_pb.js";
+import type { ExpressionTree } from "./expression_pb.js";
 
 /**
  * @generated from enum beerproto.v1.ArithmeticOperators
@@ -871,9 +871,9 @@ export declare class ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRa
   target: DiastaticPowerUnit;
 
   /**
-   * @generated from field: beerproto.v1.BinaryExpression expression = 2;
+   * @generated from field: beerproto.v1.ExpressionTree tree = 2;
    */
-  expression?: BinaryExpression;
+  tree?: ExpressionTree;
 
   constructor(data?: PartialMessage<ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate>);
 
