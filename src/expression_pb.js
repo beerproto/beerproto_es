@@ -32,15 +32,7 @@ export const BinaryArithmetic = proto3.makeEnum(
 export const UnaryExpression = proto3.makeMessageType(
   "beerproto.v1.UnaryExpression",
   () => [
-    { no: 1, name: "double", kind: "scalar", T: 1 /* ScalarType.DOUBLE */, oneof: "value" },
-    { no: 2, name: "float", kind: "scalar", T: 2 /* ScalarType.FLOAT */, oneof: "value" },
-    { no: 3, name: "int32", kind: "scalar", T: 5 /* ScalarType.INT32 */, oneof: "value" },
-    { no: 4, name: "int64", kind: "scalar", T: 3 /* ScalarType.INT64 */, oneof: "value" },
-    { no: 5, name: "uint32", kind: "scalar", T: 13 /* ScalarType.UINT32 */, oneof: "value" },
-    { no: 6, name: "uint64", kind: "scalar", T: 4 /* ScalarType.UINT64 */, oneof: "value" },
-    { no: 7, name: "bool", kind: "scalar", T: 8 /* ScalarType.BOOL */, oneof: "value" },
-    { no: 8, name: "string", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "value" },
-    { no: 9, name: "bytes", kind: "scalar", T: 12 /* ScalarType.BYTES */, oneof: "value" },
+    { no: 1, name: "double", kind: "scalar", T: 1 /* ScalarType.DOUBLE */ },
   ],
 );
 
@@ -53,18 +45,18 @@ export const BinaryExpression = proto3.makeMessageType(
     { no: 1, name: "operator", kind: "enum", T: proto3.getEnumType(BinaryArithmetic) },
     { no: 10, name: "binary_left", kind: "message", T: BinaryExpression, oneof: "left" },
     { no: 11, name: "unary_left", kind: "message", T: UnaryExpression, oneof: "left" },
-    { no: 12, name: "value_left", kind: "message", T: ValueExpression, oneof: "left" },
+    { no: 12, name: "parameter_left", kind: "message", T: ParameterExpression, oneof: "left" },
     { no: 20, name: "binary_right", kind: "message", T: BinaryExpression, oneof: "right" },
     { no: 21, name: "unary_right", kind: "message", T: UnaryExpression, oneof: "right" },
-    { no: 22, name: "value_right", kind: "message", T: ValueExpression, oneof: "right" },
+    { no: 22, name: "parameter_right", kind: "message", T: ParameterExpression, oneof: "right" },
   ],
 );
 
 /**
- * @generated from message beerproto.v1.ValueExpression
+ * @generated from message beerproto.v1.ParameterExpression
  */
-export const ValueExpression = proto3.makeMessageType(
-  "beerproto.v1.ValueExpression",
+export const ParameterExpression = proto3.makeMessageType(
+  "beerproto.v1.ParameterExpression",
   [],
 );
 

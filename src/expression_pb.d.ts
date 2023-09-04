@@ -48,63 +48,9 @@ export declare enum BinaryArithmetic {
  */
 export declare class UnaryExpression extends Message<UnaryExpression> {
   /**
-   * @generated from oneof beerproto.v1.UnaryExpression.value
+   * @generated from field: double double = 1;
    */
-  value: {
-    /**
-     * @generated from field: double double = 1;
-     */
-    value: number;
-    case: "double";
-  } | {
-    /**
-     * @generated from field: float float = 2;
-     */
-    value: number;
-    case: "float";
-  } | {
-    /**
-     * @generated from field: int32 int32 = 3;
-     */
-    value: number;
-    case: "int32";
-  } | {
-    /**
-     * @generated from field: int64 int64 = 4;
-     */
-    value: bigint;
-    case: "int64";
-  } | {
-    /**
-     * @generated from field: uint32 uint32 = 5;
-     */
-    value: number;
-    case: "uint32";
-  } | {
-    /**
-     * @generated from field: uint64 uint64 = 6;
-     */
-    value: bigint;
-    case: "uint64";
-  } | {
-    /**
-     * @generated from field: bool bool = 7;
-     */
-    value: boolean;
-    case: "bool";
-  } | {
-    /**
-     * @generated from field: string string = 8;
-     */
-    value: string;
-    case: "string";
-  } | {
-    /**
-     * @generated from field: bytes bytes = 9;
-     */
-    value: Uint8Array;
-    case: "bytes";
-  } | { case: undefined; value?: undefined };
+  double: number;
 
   constructor(data?: PartialMessage<UnaryExpression>);
 
@@ -147,10 +93,10 @@ export declare class BinaryExpression extends Message<BinaryExpression> {
     case: "unaryLeft";
   } | {
     /**
-     * @generated from field: beerproto.v1.ValueExpression value_left = 12;
+     * @generated from field: beerproto.v1.ParameterExpression parameter_left = 12;
      */
-    value: ValueExpression;
-    case: "valueLeft";
+    value: ParameterExpression;
+    case: "parameterLeft";
   } | { case: undefined; value?: undefined };
 
   /**
@@ -170,10 +116,10 @@ export declare class BinaryExpression extends Message<BinaryExpression> {
     case: "unaryRight";
   } | {
     /**
-     * @generated from field: beerproto.v1.ValueExpression value_right = 22;
+     * @generated from field: beerproto.v1.ParameterExpression parameter_right = 22;
      */
-    value: ValueExpression;
-    case: "valueRight";
+    value: ParameterExpression;
+    case: "parameterRight";
   } | { case: undefined; value?: undefined };
 
   constructor(data?: PartialMessage<BinaryExpression>);
@@ -192,21 +138,21 @@ export declare class BinaryExpression extends Message<BinaryExpression> {
 }
 
 /**
- * @generated from message beerproto.v1.ValueExpression
+ * @generated from message beerproto.v1.ParameterExpression
  */
-export declare class ValueExpression extends Message<ValueExpression> {
-  constructor(data?: PartialMessage<ValueExpression>);
+export declare class ParameterExpression extends Message<ParameterExpression> {
+  constructor(data?: PartialMessage<ParameterExpression>);
 
   static readonly runtime: typeof proto3;
-  static readonly typeName = "beerproto.v1.ValueExpression";
+  static readonly typeName = "beerproto.v1.ParameterExpression";
   static readonly fields: FieldList;
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ValueExpression;
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ParameterExpression;
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ValueExpression;
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ParameterExpression;
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ValueExpression;
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ParameterExpression;
 
-  static equals(a: ValueExpression | PlainMessage<ValueExpression> | undefined, b: ValueExpression | PlainMessage<ValueExpression> | undefined): boolean;
+  static equals(a: ParameterExpression | PlainMessage<ParameterExpression> | undefined, b: ParameterExpression | PlainMessage<ParameterExpression> | undefined): boolean;
 }
 
