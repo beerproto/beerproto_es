@@ -1174,6 +1174,59 @@ export declare class GravityType extends Message<GravityType> {
 }
 
 /**
+ * @generated from message beerproto.v1.ConversionGravityUnit
+ */
+export declare class ConversionGravityUnit extends Message<ConversionGravityUnit> {
+  /**
+   * @generated from field: repeated beerproto.v1.ConversionGravityUnit.ConversionGravityUnitRate rates = 1;
+   */
+  rates: ConversionGravityUnit_ConversionGravityUnitRate[];
+
+  constructor(data?: PartialMessage<ConversionGravityUnit>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "beerproto.v1.ConversionGravityUnit";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ConversionGravityUnit;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ConversionGravityUnit;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ConversionGravityUnit;
+
+  static equals(a: ConversionGravityUnit | PlainMessage<ConversionGravityUnit> | undefined, b: ConversionGravityUnit | PlainMessage<ConversionGravityUnit> | undefined): boolean;
+}
+
+/**
+ * @generated from message beerproto.v1.ConversionGravityUnit.ConversionGravityUnitRate
+ */
+export declare class ConversionGravityUnit_ConversionGravityUnitRate extends Message<ConversionGravityUnit_ConversionGravityUnitRate> {
+  /**
+   * @generated from field: beerproto.v1.GravityUnit target = 1;
+   */
+  target: GravityUnit;
+
+  /**
+   * @generated from field: beerproto.v1.ExpressionTree tree = 2;
+   */
+  tree?: ExpressionTree;
+
+  constructor(data?: PartialMessage<ConversionGravityUnit_ConversionGravityUnitRate>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "beerproto.v1.ConversionGravityUnit.ConversionGravityUnitRate";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ConversionGravityUnit_ConversionGravityUnitRate;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ConversionGravityUnit_ConversionGravityUnitRate;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ConversionGravityUnit_ConversionGravityUnitRate;
+
+  static equals(a: ConversionGravityUnit_ConversionGravityUnitRate | PlainMessage<ConversionGravityUnit_ConversionGravityUnitRate> | undefined, b: ConversionGravityUnit_ConversionGravityUnitRate | PlainMessage<ConversionGravityUnit_ConversionGravityUnitRate> | undefined): boolean;
+}
+
+/**
  * @generated from message beerproto.v1.SpecificHeatType
  */
 export declare class SpecificHeatType extends Message<SpecificHeatType> {

@@ -23,6 +23,7 @@ export const BinaryArithmetic = proto3.makeEnum(
     {no: 2, name: "BINARY_ARITHMETIC_SUBTRACTION", localName: "SUBTRACTION"},
     {no: 3, name: "BINARY_ARITHMETIC_MULTIPLICATION", localName: "MULTIPLICATION"},
     {no: 4, name: "BINARY_ARITHMETIC_DIVISION", localName: "DIVISION"},
+    {no: 5, name: "BINARY_ARITHMETIC_POWER", localName: "POWER"},
   ],
 );
 

@@ -41,6 +41,11 @@ export declare enum BinaryArithmetic {
    * @generated from enum value: BINARY_ARITHMETIC_DIVISION = 4;
    */
   DIVISION = 4,
+
+  /**
+   * @generated from enum value: BINARY_ARITHMETIC_POWER = 5;
+   */
+  POWER = 5,
 }
 
 /**

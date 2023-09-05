@@ -464,6 +464,28 @@ export const GravityType = proto3.makeMessageType(
 );
 
 /**
+ * @generated from message beerproto.v1.ConversionGravityUnit
+ */
+export const ConversionGravityUnit = proto3.makeMessageType(
+  "beerproto.v1.ConversionGravityUnit",
+  () => [
+    { no: 1, name: "rates", kind: "message", T: ConversionGravityUnit_ConversionGravityUnitRate, repeated: true },
+  ],
+);
+
+/**
+ * @generated from message beerproto.v1.ConversionGravityUnit.ConversionGravityUnitRate
+ */
+export const ConversionGravityUnit_ConversionGravityUnitRate = proto3.makeMessageType(
+  "beerproto.v1.ConversionGravityUnit.ConversionGravityUnitRate",
+  () => [
+    { no: 1, name: "target", kind: "enum", T: proto3.getEnumType(GravityUnit) },
+    { no: 2, name: "tree", kind: "message", T: ExpressionTree },
+  ],
+  {localName: "ConversionGravityUnit_ConversionGravityUnitRate"},
+);
+
+/**
  * @generated from message beerproto.v1.SpecificHeatType
  */
 export const SpecificHeatType = proto3.makeMessageType(
