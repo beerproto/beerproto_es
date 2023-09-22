@@ -523,7 +523,7 @@ export const ConversionSpecificVolumeUnit = proto3.makeMessageType(
 export const ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate = proto3.makeMessageType(
   "beerproto.v1.ConversionSpecificVolumeUnit.ConversionSpecificVolumeUnitRate",
   () => [
-    { no: 1, name: "target", kind: "enum", T: proto3.getEnumType(VolumeUnit) },
+    { no: 1, name: "target", kind: "enum", T: proto3.getEnumType(SpecificVolumeUnit) },
     { no: 2, name: "operator", kind: "enum", T: proto3.getEnumType(BinaryArithmetic) },
     { no: 3, name: "value", kind: "scalar", T: 1 /* ScalarType.DOUBLE */ },
   ],

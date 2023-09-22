@@ -1313,9 +1313,9 @@ export declare class ConversionSpecificVolumeUnit extends Message<ConversionSpec
  */
 export declare class ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate extends Message<ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate> {
   /**
-   * @generated from field: beerproto.v1.VolumeUnit target = 1;
+   * @generated from field: beerproto.v1.SpecificVolumeUnit target = 1;
    */
-  target: VolumeUnit;
+  target: SpecificVolumeUnit;
 
   /**
    * @generated from field: beerproto.v1.BinaryArithmetic operator = 2;
