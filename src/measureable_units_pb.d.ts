@@ -1285,6 +1285,64 @@ export declare class ConcentrationType extends Message<ConcentrationType> {
 }
 
 /**
+ * @generated from message beerproto.v1.ConversionSpecificVolumeUnit
+ */
+export declare class ConversionSpecificVolumeUnit extends Message<ConversionSpecificVolumeUnit> {
+  /**
+   * @generated from field: repeated beerproto.v1.ConversionSpecificVolumeUnit.ConversionSpecificVolumeUnitRate rates = 1;
+   */
+  rates: ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate[];
+
+  constructor(data?: PartialMessage<ConversionSpecificVolumeUnit>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "beerproto.v1.ConversionSpecificVolumeUnit";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ConversionSpecificVolumeUnit;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ConversionSpecificVolumeUnit;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ConversionSpecificVolumeUnit;
+
+  static equals(a: ConversionSpecificVolumeUnit | PlainMessage<ConversionSpecificVolumeUnit> | undefined, b: ConversionSpecificVolumeUnit | PlainMessage<ConversionSpecificVolumeUnit> | undefined): boolean;
+}
+
+/**
+ * @generated from message beerproto.v1.ConversionSpecificVolumeUnit.ConversionSpecificVolumeUnitRate
+ */
+export declare class ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate extends Message<ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate> {
+  /**
+   * @generated from field: beerproto.v1.VolumeUnit target = 1;
+   */
+  target: VolumeUnit;
+
+  /**
+   * @generated from field: beerproto.v1.BinaryArithmetic operator = 2;
+   */
+  operator: BinaryArithmetic;
+
+  /**
+   * @generated from field: double value = 3;
+   */
+  value: number;
+
+  constructor(data?: PartialMessage<ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate>);
+
+  static readonly runtime: typeof proto3;
+  static readonly typeName = "beerproto.v1.ConversionSpecificVolumeUnit.ConversionSpecificVolumeUnitRate";
+  static readonly fields: FieldList;
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate;
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate;
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate;
+
+  static equals(a: ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate | PlainMessage<ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate> | undefined, b: ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate | PlainMessage<ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate> | undefined): boolean;
+}
+
+/**
  * @generated from message beerproto.v1.SpecificVolumeType
  */
 export declare class SpecificVolumeType extends Message<SpecificVolumeType> {
